@@ -1,0 +1,12 @@
+<input type="text" class=form-control [(ngModel)]="username"> 
+<h3>Username:{{username}}</h3>
+<button class="btn btn-primary" [disabled]="statusCheck()" (click)="delete()">Clear</button>
+<hr>
+
+<button class="btn btn-primary" (click) = "display()"> Display details</button>
+<div *ngFor="let d of buttonClicks ; let i = index"> 
+<p   [ngStyle] = "{backgroundColor: 'lightblue'}" [ngClass] = "{five: everyFive()}" >
+   {{i +1}} Lorem Ipsum is simply dummy text 
+</p>
+</div>
+
